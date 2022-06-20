@@ -1212,3 +1212,20 @@ p {
 #main2-9{
     margin-bottom: 50px;
 }
+.maps{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.map_btn{
+    background-color: rgba(210, 233, 245, 0.911);
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.map-text{
+    
+}

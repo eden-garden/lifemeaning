@@ -108,7 +108,7 @@
 							<label for="slide2">&nbsp;</label>
 							<label for="slide3">&nbsp;</label>
 					</div>
-			</div>
+				</div>
 			</div>
 			
 			
@@ -123,7 +123,6 @@
 				<img class="main2 reveal" src="img/07.jpg" alt="main">
 				<img class="main2 reveal" src="img/08.jpg" alt="main">
 				<img id="main2-9"class="main2 reveal" src="img/09.jpg" alt="main">
-				
 			</div>
 
 			<script charset="UTF-8" src="./files/sdk.js"></script>
@@ -140,14 +139,28 @@
 
 			<!-- 오시는 길 -->
 			<div class="toggle-on;">
+				<div class="maps">
+					<div class="map_btn">
+						<a href="https://map.naver.com/v5/search/%EC%95%88%EB%94%94%EC%98%A5%EA%B5%90%ED%9A%8C?c=14103061.6131812,4522271.4515711,15,0,0,0,dh">
+							<h1 class="map_text">서울 안디옥교회</h1>
+						</a>
+					</div>
+					<div class="map_btn">
+						<a href="https://map.naver.com/v5/search/%EC%95%88%EB%94%94%EC%98%A5%EA%B5%90%ED%9A%8C?c=14103061.6131812,4522271.4515711,15,0,0,0,dh">
+							<h1 class="map_text">구미 안디옥교회</h1>
+						</a>
+					</div>
+				</div>
+				
 				<!-- <div class="content-title pb-30 pt-30">
 					<div class="main-img reveal background-image" id="location"><img src="location.png"></div>
 					<div class="main-img reveal background-image" id="address"><img src="address.png"></div>
 				</div> -->
 				<!-- <div class="pb-0 bottom-0 off-offlineEvent reveal"></div> -->
-					<div id="map"
+					<!--
+						<div id="map"
 						style="overflow: hidden; background: url(&quot;https://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png&quot;);">
-						<!-- <div
+						<div
 							style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; touch-action: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
 							<div style="position: absolute;">
 								<div style="position: absolute; z-index: 0;"></div>
@@ -182,10 +195,10 @@
 									</div>
 								</div>
 
-							</div> -->
+							</div>
 						</div>
 						
-						<!-- <div
+						<div
 							style="position: absolute; z-index: 1; margin: 0px 6px; height: 19px; line-height: 14px; left: 0px; bottom: 0px; color: rgb(0, 0, 0);">
 							<div style="color: rgb(0, 0, 0); text-align: center; font-size: 10px; float: left; display: none;">
 								<div
@@ -202,7 +215,226 @@
 								<div style="font: 11px / 11px Arial, Tahoma, Dotum, sans-serif; float: left;"></div>
 							</div>
 						</div>
-						<div style="position: absolute; z-index: 2; left: 0px; top: 0px;"></div> -->
+						<div style="position: absolute; z-index: 2; left: 0px; top: 0px;"></div>
+					-->
+					<!-- map -->
+					<!--
+						<script>
+						var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+							mapOption = {
+								center: new kakao.maps.LatLng(36.0734673043172, 128.355375296391), // 지도의 중심좌표
+								level: 4 // 지도의 확대 레벨
+							};
+
+						var map = new kakao.maps.Map(mapContainer, mapOption);
+
+						var imageSrc = './files/marker_red.png', // 마커이미지의 주소입니다    
+							imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+							imageOption = {
+								offset: new kakao.maps.Point(27, 69)
+							}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+
+						// 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+						var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+							markerPosition = new kakao.maps.LatLng(36.0734673043172, 128.355375296391); // 마커가 표시될 위치입니다
+
+						// 마커를 생성합니다
+						var marker = new kakao.maps.Marker({
+							map: map,
+							position: markerPosition,
+							image: markerImage
+						});
+
+						// 마커가 지도 위에 표시되도록 설정합니다
+						marker.setMap(map);
+
+						// 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+						var content = '<div class="customoverlay">' +
+							'    <span class="title">안디옥교회</span>' +
+							'</div>';
+
+						// 커스텀 오버레이가 표시될 위치입니다 
+						var position = new Kakao.maps.LatLng(36.0734673043172, 128.355375296391);
+
+						// 커스텀 오버레이를 생성합니다
+						var customOverlay = new Kakao.maps.CustomOverlay({
+							map: map,
+							position: position,
+							content: content,
+							yAnchor: 1
+						});
+					</script>
+
+<!-- navigation -->
+					<!-- <div class="navigation">
+						<table class="navi-table">
+							<tbody>
+								<tr>
+									<td class="nivi-td"><a
+											href="https://api2.sktelecom.com/tmap/app/routes?appKey=250d4611-11bb-4089-b0f7-12ce7c1e14a8&amp;name=%EC%95%88%EB%94%94%EC%98%A5%EA%B5%90%ED%9A%8C&amp;lon=128.355375296391&amp;lat=36.0734673043172"
+											target="_blank"><img src="./files/tmap.png" class="shadow-small"><br><span
+												style="font-size: 9px; color: #353434;">티맵</span></a></td>
+									<td class="nivi-td"><a id="navi" href="http://antiochi.net/ach30invite" onclick="navi();"><img
+												src="./files/kakaonavi.png" class="shadow-small"><br><span
+												style="font-size: 9px; color: #353434;">카카오내비</span></a></td>
+									<td class="nivi-td"><a
+											href="http://map.daum.net/link/to/%EC%95%88%EB%94%94%EC%98%A5%EA%B5%90%ED%9A%8C,36.0734673043172,128.355375296391"
+											target="_blank"><img src="./files/kakaomap.png" class="shadow-small"></a><br><span
+											style="font-size: 9px; color: #353434;">카카오맵</span></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<!-- 카카오내비 API 시작 -->
+						<!-- <script type="text/javascript">
+							//<![CDATA[
+							// 사용할 앱의 JavaScript 키를 설정해 주세요.
+							//kakao.init('244dcfcf4f8177563ab5bd1f09f8c2a1');
+							// 카카오 로그인 버튼을 생성합니다.
+							function navi() {
+								Kakao.Navi.start({
+									name: "안디옥교회",
+									x: 128.355375296391,
+									y: 36.0734673043172,
+									coordType: 'wgs84'
+								});
+							}
+							//]]>
+						</script> -->
+						<!-- 카카오내비 API 끝 -->
+					<!-- </div> -->
+				<!-- </div> -->
+
+				<!-- 한번더 -->
+				
+				<!-- 한번더 끝 -->
+
+				<!-- 오시는길 끝 -->
+
+				<!-- 안내문구 끝 -->
+				<div class="footer footer-no-padding" style="transition: all 300ms ease 0s;">
+
+					<div class="footer-socials">
+
+						<a id="kakao-link-btn" href="javascript:;"  
+						class="shadow-small icon icon-round no-border icon-xs"> 
+						<img src="./files/logo_kakaotalk.jpg" class="sns-logo"></a> 
+						<script type="text/javascript"> 
+
+						 // 사용할 앱의 JavaScript 키를 설정해 주세요. 1회만 설정-카카오내비랑 중복x
+							//Kakao.init('244dcfcf4f8177563ab5bd1f09f8c2a1');
+						  // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+							Kakao.Link.createDefaultButton({
+								container: '#kakao-link-btn',
+								objectType: 'feed',
+								content: {
+										title: '안디옥교회 창립 30주년 기념',
+										description: '2022년 5월 14일 토요일 오후 2시  ',
+										imageUrl: 'http://www.antiochi.net/ach30invite/files/theme.jpg',
+										link: {
+											mobileWebUrl: 'http://www.antiochi.net/ach30invite',
+											webUrl: 'http://www.antiochi.net/ach30invite'
+										},
+									},
+									buttonTitle: '자세히 보기',
+							}); 
+						</script> 
+					
+
+						<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.antiochi.net/ach30invite&amp;src=sdkpreparse"
+							target="_blank" class="shadow-small icon icon-round no-border icon-xs "><img
+								src="./files/logo_facebook.jpg" class="sns-logo"></a>
+
+						<a href="https://share.naver.com/web/shareView.nhn?url=http://antiochi.net/ach30invite&amp;title=%EC%86%8C%EC%A4%91%ED%95%9C%20%EB%8B%B9%EC%8B%A0%EC%9D%84%20%EC%B4%88%EB%8C%80%ED%95%A9%EB%8B%88%EB%8B%A4"
+							target="_blank" class="shadow-small icon icon-round no-border icon-xs "><img src="./files/logo_blog.jpg"
+								class="sns-logo"></a>
+
+						<a href="http://antiochi.net/ach30invite#" id="copyUrl"
+							class="shadow-small icon icon-round no-border icon-xs bg-tumblr"><i class="fa fa-link font-14"></i></a>
+
+						<a href="http://antiochi.net/ach30invite#"
+							class="shadow-small icon icon-round no-border icon-xs back-to-top" style="border-radius: 100%;"><i
+								class="fa fa-angle-up" style="background-color: #d2d4d7;"></i></a>
+						<textarea id="url" readonly="">http://antiochi.net/ach30invite</textarea>
+						<script>
+							$("#copyUrl").click(function () {
+								$("#url").select();
+								document.execCommand('copy');
+								alert("초대장 링크(url주소)를 복사 하였습니다.");
+							});
+						</script>
+					</div>
+					<p class="center-text bottom-0"><img src="achcollege.png" class="sns-logo"></p>
+					<p class="footer-text"> ©&nbsp;<script>
+							document.write(new Date().getFullYear())
+						</script> Antioch Church</a>, all rights reserved</p>
+				</div>
+			</div>
+
+			<div class="toggle-on;">
+				<!-- <div class="content-title pb-30 pt-30">
+					<div class="main-img reveal background-image" id="location"><img src="location.png"></div>
+					<div class="main-img reveal background-image" id="address"><img src="address.png"></div>
+				</div> -->
+				<!-- <div class="pb-0 bottom-0 off-offlineEvent reveal"></div> -->
+					<div id="map"
+						style="overflow: hidden; background: url(&quot;https://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png&quot;);">
+						<div
+							style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; touch-action: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+							<div style="position: absolute;">
+								<div style="position: absolute; z-index: 0;"></div>
+								<div style="position: absolute; z-index: 1; transform: scale(1); left: 0px; top: 0px;"><img
+										src="./files/687.png" alt="" draggable="false"
+										style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -57px; top: 134px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+										src="./files/688.png" alt="" draggable="false"
+										style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 199px; top: 134px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+										src="./files/687(1).png" alt="" draggable="false"
+										style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -57px; top: -122px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+										src="./files/688(1).png" alt="" draggable="false"
+										style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 199px; top: -122px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+										src="./files/687(2).png" alt="" draggable="false"
+										style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -57px; top: -378px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+										src="./files/688(2).png" alt="" draggable="false"
+										style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 199px; top: -378px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+								</div>
+								<div style="position: absolute; z-index: 1;"></div>
+								<div style="width: 237px; height: 359px; position: absolute; z-index: 1;"></div>
+								<div style="position: absolute; z-index: 1; transform: scale(1);"><svg version="1.1"
+										style="stroke: none; stroke-dashoffset: 0.5; stroke-linejoin: round; fill: none; transform: translateZ(0px); position: absolute; width: 1185px; height: 1795px; left: -474px; top: -718px;"
+										viewBox="0 0 1185 1795">
+										<defs></defs>
+									</svg></div>
+								<div style="position: absolute; z-index: 1; width: 100%; height: 0px; transform: translateZ(0px);">
+									<div style="position: absolute; margin: -69px 0px 0px -27px; z-index: 0; left: 118px; top: 179px;">
+										<img draggable="false" src="./files/marker_red.png" alt="" title=""
+											style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 64px, 69px, 0px); top: 0px; left: 0px; width: 64px; height: 69px;">
+									</div>
+									<div
+										style="position: absolute; z-index: 0; white-space: nowrap; margin: -38px 0px 0px -38px; left: 118px; top: 179px;">
+									</div>
+								</div>
+
+							</div>
+						</div>
+						
+						<div
+							style="position: absolute; z-index: 1; margin: 0px 6px; height: 19px; line-height: 14px; left: 0px; bottom: 0px; color: rgb(0, 0, 0);">
+							<div style="color: rgb(0, 0, 0); text-align: center; font-size: 10px; float: left; display: none;">
+								<div
+									style="float: left; margin: 2px 3px 0px 4px; height: 6px; transition: width 0.1s ease 0s; border-top: none rgb(0, 0, 0); border-right: 2px solid rgb(0, 0, 0); border-bottom: 2px solid rgb(0, 0, 0); border-left: 2px solid rgb(0, 0, 0); border-image: initial; width: 46px;">
+								</div>
+								<div
+									style="float: left; margin: 0px 4px 0px 0px; font-family: AppleSDGothicNeo-Regular, 돋움, dotum, sans-serif; font-weight: bold; color: rgb(0, 0, 0);">
+									100m</div>
+							</div>
+							<div style="margin: 0px 4px; float: left;"><a target="_blank" href="http://map.Kakao.com/"
+									title="Kakao 지도로 보시려면 클릭하세요." style="float: left; width: 32px; height: 10px;"><img
+										src="./files/m_bi_b.png" alt="Kakao 지도로 이동"
+										style="float: left; width: 32px; height: 10px; border: none;"></a>
+								<div style="font: 11px / 11px Arial, Tahoma, Dotum, sans-serif; float: left;"></div>
+							</div>
+						</div>
+						<div style="position: absolute; z-index: 2; left: 0px; top: 0px;"></div>
 					
 					<!-- map -->
 					<script>
@@ -290,6 +522,11 @@
 						<!-- 카카오내비 API 끝 -->
 					<!-- </div> -->
 				</div>
+
+
+				<!-- 한번더 -->
+
+				<!-- 한번더 끝 -->
 				<!-- 오시는길 끝 -->
 
 				<!-- 안내문구 끝 -->
@@ -309,12 +546,12 @@
 								container: '#kakao-link-btn',
 								objectType: 'feed',
 								content: {
-										title: '안디옥교회 창립 30주년 기념',
-										description: '2022년 5월 14일 토요일 오후 2시  ',
-										imageUrl: 'http://www.antiochi.net/ach30invite/files/theme.jpg',
+										title: '',
+										description: '2022년 6월 25일 토요일 오후 6시  ',
+										imageUrl: 'https://eden-garden.github.io/lifemeaning/main.jpg',
 										link: {
-											mobileWebUrl: 'http://www.antiochi.net/ach30invite',
-											webUrl: 'http://www.antiochi.net/ach30invite'
+											mobileWebUrl: 'https://eden-garden.github.io/lifemeaning/',
+											webUrl: 'https://eden-garden.github.io/lifemeaning/'
 										},
 									},
 									buttonTitle: '자세히 보기',
@@ -322,21 +559,21 @@
 						</script> 
 					
 
-						<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.antiochi.net/ach30invite&amp;src=sdkpreparse"
+						<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhttps://eden-garden.github.io/lifemeaning/&amp;src=sdkpreparse"
 							target="_blank" class="shadow-small icon icon-round no-border icon-xs "><img
 								src="./files/logo_facebook.jpg" class="sns-logo"></a>
 
-						<a href="https://share.naver.com/web/shareView.nhn?url=http://antiochi.net/ach30invite&amp;title=%EC%86%8C%EC%A4%91%ED%95%9C%20%EB%8B%B9%EC%8B%A0%EC%9D%84%20%EC%B4%88%EB%8C%80%ED%95%A9%EB%8B%88%EB%8B%A4"
+						<a href="https://share.naver.com/web/shareView.nhn?url=https://eden-garden.github.io/lifemeaning/&amp;title=%EC%86%8C%EC%A4%91%ED%95%9C%20%EB%8B%B9%EC%8B%A0%EC%9D%84%20%EC%B4%88%EB%8C%80%ED%95%A9%EB%8B%88%EB%8B%A4"
 							target="_blank" class="shadow-small icon icon-round no-border icon-xs "><img src="./files/logo_blog.jpg"
 								class="sns-logo"></a>
 
-						<a href="http://antiochi.net/ach30invite#" id="copyUrl"
+						<a href="https://eden-garden.github.io/lifemeaning#" id="copyUrl"
 							class="shadow-small icon icon-round no-border icon-xs bg-tumblr"><i class="fa fa-link font-14"></i></a>
 
-						<a href="http://antiochi.net/ach30invite#"
+						<a href="https://eden-garden.github.io/lifemeaning/#"
 							class="shadow-small icon icon-round no-border icon-xs back-to-top" style="border-radius: 100%;"><i
 								class="fa fa-angle-up" style="background-color: #d2d4d7;"></i></a>
-						<textarea id="url" readonly="">http://antiochi.net/ach30invite</textarea>
+						<textarea id="url" readonly="">https://eden-garden.github.io/lifemeaning</textarea>
 						<script>
 							$("#copyUrl").click(function () {
 								$("#url").select();
@@ -345,7 +582,7 @@
 							});
 						</script>
 					</div>
-					<p class="center-text bottom-0"><img src="achcollege.png" class="sns-logo"></p>
+					<p class="center-text bottom-0"><img src="main.png" class="sns-logo"></p>
 					<p class="footer-text"> ©&nbsp;<script>
 							document.write(new Date().getFullYear())
 						</script> Antioch Church</a>, all rights reserved</p>
