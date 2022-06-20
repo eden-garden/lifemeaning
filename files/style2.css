@@ -1259,7 +1259,11 @@ animation-name: slidein;
 }
 
 #vertical{
-  height: 400px;
+  height: 100%;
+}
+#prvideo{
+  margin-top: 50px;
+  margin-bottom: 300px;
 }
 #more{
   margin-top: 50px;
@@ -1271,4 +1275,10 @@ animation-name: slidein;
   justify-content: space-evenly;
   margin-left: 30px;
   margin-top: 0px;
+}
+#구미시{
+  margin-top: 30px;
+}
+#강동구{
+  margin-top: 100px;
 }
