@@ -15,6 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="./files/framework.css"><!--  로딩 -->
 	<link rel="stylesheet" type="text/css" href="./files/style.css">   <!-- 전체형태 -->
 	<!-- <link rel="stylesheet" type="text/css" href="slider1.css"> -->
+	<link rel="stylesheet" href="slider1.css">
 
 	<!-- <link rel="stylesheet" type="text/css" href="./files/calendar.css"> -->
 	<!-- <link rel="stylesheet" type="text/css" href="./files/fonts.css"> -->
@@ -50,12 +51,24 @@
 	<title>안디옥교회 대학청년 새벗의 날</title>
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="theme-color" content="#000000">
-
+	<!-- <script type="text/javascript">
+		var imgArray=new Array();
+		imgArray[0]="img/main1.jpg";
+		imgArray[1]="img/main2.jpg";
+		imgArray[2]="img/main3.jpg";
+	
+		function showImage(){
+		 var imgNum=Math.round(Math.random()*2);
+		 var objImg=document.getElementById("introimg");
+		 objImg.src=imgArray[imgNum];
+		 setTimeout(showImage,3000);
+		}
+	</script>	 -->
 	
 </head>
 
 <!-- head 1차 정리 -->
-<body class="is-not-ios">
+<body class="is-not-ios" onload="showImage()">
 	<!-- 배경음 -->
 	<!-- <iframe src="" allow="autoplay" loop="infinite" id="audio" style="display:none"></iframe>
 	<audio src="./bgmFast.mp3" autoplay loop></audio> -->
@@ -81,23 +94,36 @@
 		<!-- <div id="menu-hider" style="transition: all 300ms ease 0s;"></div> -->
 		<div class="page-content" style="transition: all 300ms ease 0s;">
 			<div class="main-img background-image background-container" id="container1">
-				<img src="img/main.jpg"/>
+				<div class="slider">
+					<input type="radio" name="slide" id="slide1" checked="">
+					<input type="radio" name="slide" id="slide2">
+					<input type="radio" name="slide" id="slide3">
+					<ul id="imgholder" class="imgs">
+							<li><img class="imgsl" src="img/main1.jpg"></li>
+							<li><img class="imgsl" src="img/main2.jpg"></li>
+							<li><img class="imgsl" src="img/main3.jpg"></li>
+					</ul>
+					<div class="bullets">
+							<label for="slide1">&nbsp;</label>
+							<label for="slide2">&nbsp;</label>
+							<label for="slide3">&nbsp;</label>
+					</div>
 			</div>
+			</div>
+			
 			
 
 			<div class="background-container" id="container1">
-				<p class="reveal main-text">살아가면서 중요한 만남은 많지만,</p>
-				<p class="reveal main-text">인생을 바꾸는 만남은 많지 않습니다. </p>
-				<p class="reveal main-text strong-text">5/28 토요일 오후 3시</p>
-				<p class="reveal main-text">이 시간이 여러분의 인생을 </p>
-				<p class="reveal main-text">바꾸는 시간이 되길 바라며,</p>
-				<p class="reveal main-text"><span class="strong-text">안디옥교회</span>로</p>
-				<p class="reveal main-text">여러분을 초대합니다.</p>
-			</div> 
-			<div class="background-container" id="container3">
-				<p class="reveal main-text strong-text title">오시는 길</p>
-				<p class="reveal main-text location">경북 구미시 오태길 47 (오태동)</p>
-				<p class="reveal main-text location">안디옥교회</p>
+				<img id="main2-1" class="main2 reveal" src="img/01.jpg" alt="main">
+				<img class="main2 reveal" src="img/02.jpg" alt="main">
+				<img class="main2 reveal" src="img/03.jpg" alt="main">
+				<img class="main2 reveal" src="img/04.jpg" alt="main">
+				<img class="main2 reveal" src="img/05.jpg" alt="main">
+				<img class="main2 reveal" src="img/06.jpg" alt="main">
+				<img class="main2 reveal" src="img/07.jpg" alt="main">
+				<img class="main2 reveal" src="img/08.jpg" alt="main">
+				<img id="main2-9"class="main2 reveal" src="img/09.jpg" alt="main">
+				
 			</div>
 
 			<script charset="UTF-8" src="./files/sdk.js"></script>
