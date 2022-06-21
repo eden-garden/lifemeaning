@@ -1269,7 +1269,7 @@ animation-name: slidein;
   margin-top:150px;
 }
 #prvideo{
-  margin-top: 350px;
+  margin-top: 300px;
   margin-bottom: 0;
 }
 #location-both{
@@ -1295,7 +1295,7 @@ animation-name: slidein;
 }
 
 #antioch{
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-name: slidein;
   animation-iteration-count: finite;
 }
@@ -1311,7 +1311,7 @@ animation-name: slidein;
  }
 }
 #welcoming{
-  animation-duration: 3.5s;
+  animation-duration: 3s;
   animation-name: slidein;
   animation-iteration-count: finite;
 }
@@ -1327,7 +1327,7 @@ animation-name: slidein;
  }
 }
 #worship{
-  animation-duration: 5s;
+  animation-duration: 4.5s;
   animation-name: slidein;
   animation-iteration-count: finite;
 }
@@ -1344,7 +1344,7 @@ animation-name: slidein;
 }
 
 #img2022{
-  animation-duration: 6.5s;
+  animation-duration: 6s;
   animation-name: slidein;
   animation-iteration-count: finite;
 }
